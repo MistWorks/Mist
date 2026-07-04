@@ -1,0 +1,7 @@
+*.bin
+*.o
+*.elf
+*.tmp
+*.log
+*.txt
+*.img
