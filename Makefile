@@ -9,9 +9,10 @@ BUILD_DIR := mbin
 
 all: $(BUILD_DIR)/Mist.img
 
-$(BUILD_DIR)/Minit/BootLoader.bin: msc/Minit/BootLoader.asm
+$(BUILD_DIR)/boot/Minit.bin:
 	@mkdir -p $(dir $@)
-	nasm -f bin $< -o $@ -g
+	$(MAKE) -C ../Minit
+	cp ../Minit/build/Minit.img $@
 
 $(BUILD_DIR)/kernel/Kernel.elf: $(ALL_OBJS)
 	@mkdir -p $(dir $@)
@@ -21,8 +22,11 @@ $(BUILD_DIR)/kernel/Kernel.bin: $(BUILD_DIR)/kernel/Kernel.elf
 	@mkdir -p $(dir $@)
 	llvm-objcopy -O binary $< $@
 
-$(BUILD_DIR)/Mist.img: $(BUILD_DIR)/Minit/BootLoader.bin $(BUILD_DIR)/kernel/Kernel.bin
-	cat $^ > $@
+$(BUILD_DIR)/Mist.img: $(BUILD_DIR)/boot/Minit.bin $(BUILD_DIR)/kernel/Kernel.bin
+	@mkdir -p $(dir $@)
+	dd if=/dev/zero of=$@ bs=512 count=128
+	dd if=$(BUILD_DIR)/boot/Minit.bin of=$@ bs=512 conv=notrunc
+	dd if=$(BUILD_DIR)/kernel/Kernel.bin of=$@ bs=512 seek=4 conv=notrunc
 
 mbin/%.o: msc/%.c
 	@mkdir -p $(dir $@)
@@ -40,5 +44,6 @@ debug: mbin/kernel/Kernel.elf
 
 clean:
 	rm -rf $(BUILD_DIR)
+	$(MAKE) -C ../Minit clean
 
 .PHONY: all run clean

@@ -36,9 +36,9 @@
 - Понимать некоторые команды терминала
 - и т.д.
 
-И все это сделано, используя [собственную стандартную библиотеку C](https://github.com/ImLfyz/Mist/msc/mistd)!
+И все это сделано, используя [собственную стандартную библиотеку C](https://github.com/MistWorks/Mist/msc/mistd)!
 
-Так же я составил [документацию](https://github.com/ImLfyz/Mist/docs) с объяснением каждой функции в коде
+Так же я составил [документацию](https://github.com/MistWorks/Mist/docs) с объяснением каждой функции в коде
 
 <div align=center>
 
@@ -81,7 +81,7 @@
   - Скопировать репозиторий:
 
   ```
-  git clone https://github.com/ImLfyz/Mist
+  git clone https://github.com/MistWorks/Mist
   ```
   - Скомпилировать (Clang):
 
@@ -106,7 +106,7 @@
 
   - Cкопировать Mist.img:
   ```
-  wget https://github.com/ImLfyz/Mist/releases/download/v0.10/Mist.img
+  wget https://github.com/MistWorks/Mist/releases/download/v0.10/Mist.img
   ```
   - Запустить в QEMU:
   ```
@@ -120,6 +120,6 @@
 
 В нем могут быть баги и ошибки
 
-Если вы нашли такие, можете обратиться в [issues](https://github.com/ImLfyz/Mist/issues)
+Если вы нашли такие, можете обратиться в [issues](https://github.com/MistWorks/Mist/issues)
 
 Также можете делать PR с вашим кодом. Удачи!

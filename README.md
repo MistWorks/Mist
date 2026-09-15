@@ -36,9 +36,9 @@ It uses MIT license so you can do anything with this code!
 - Process any shell commands
 - etc..
 
-And all of this with [own C standard library](https://github.com/ImLfyz/Mist/msc/mistd)!
+And all of this with [own C standard library](https://github.com/MistWorks/Mist/msc/mistd)!
 
-There is [documentation](https://github.com/ImLfyz/Mist/docs) to explain you every function in code
+There is [documentation](https://github.com/MistWorks/Mist/docs) to explain you every function in code
 
 <div align=center>
 
@@ -81,7 +81,7 @@ You can start with 2 ways:
   - Clone Mist repo:
 
   ```
-  git clone https://github.com/ImLfyz/Mist
+  git clone https://github.com/MistWorks/Mist
   ```
   - Compile (Clang):
 
@@ -106,7 +106,7 @@ You can start with 2 ways:
 
   - Copy Mist.img:
   ```
-  wget https://github.com/ImLfyz/Mist/releases/download/v0.10/Mist.img
+  wget https://github.com/MistWorks/Mist/releases/download/v0.10/Mist.img
   ```
   - Run with QEMU:
   ```
@@ -120,6 +120,6 @@ You can start with 2 ways:
 
 It may contain bugs and errors
 
-If you have one of these, you can visit the [issues](https://github.com/ImLfyz/Mist/issues)
+If you have one of these, you can visit the [issues](https://github.com/MistWorks/Mist/issues)
 
 Also you can do pull requests with your code. You're welcome!
